@@ -10,14 +10,18 @@ export class EmpleadoComponent{
     public titulo = 'Título del componente de empleado';
     public empleado:Empleado;
     public trabajadores:Array<Empleado>;
+    public trabajador_externo: boolean;
+    public color: string;
 
     constructor(){
         this.empleado = new Empleado('Javier González', 45, 'Cocinero', true);
         this.trabajadores = [
-            new Empleado('Manuela Sixfingers', 61, 'Consultora', true),
+            new Empleado('Manuela Sixfingers', 61, 'Consultora', false),
             new Empleado('James Kakarotto', 27, 'Jurista', true),
             new Empleado('Marisol Sampaoli', 19, 'Secretaria', true)
         ];
+        this.trabajador_externo = false;
+        this.color = 'red';
     }
 
     ngOnInit(){
@@ -25,7 +29,9 @@ export class EmpleadoComponent{
         console.log(this.trabajadores);
     }
    
-   
+   cambiarExterno(valor){
+       this.trabajador_externo = valor;
+   }
 }
    
     /*public nombre: string;
