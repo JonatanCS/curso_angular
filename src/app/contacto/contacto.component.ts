@@ -20,4 +20,12 @@ export class ContactoComponent{
             this.parametro = params['page'];
         });
     }
+
+    redirigir(){
+        this._router.navigate(['/contacto', 'nosense']);
+    }
+
+    redirigirDos(){
+        this._router.navigate(['/pagina-principal']);
+    }
 }
