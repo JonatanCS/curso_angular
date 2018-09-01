@@ -8,6 +8,9 @@ import { EmpleadoComponent }  from './empleado/empleado.component';
 import { routing, appRoutingProviders } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent }  from './contacto/contacto.component';
+import { CochesComponent } from "./coches/coches.component";
+import { ConversorPipe } from "./pipe/conversor.pipe";
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,9 @@ import { ContactoComponent }  from './contacto/contacto.component';
     FrutaComponent,
     EmpleadoComponent,
     HomeComponent,
-    ContactoComponent
+    ContactoComponent,
+    ConversorPipe,
+    CochesComponent
   ],
   imports: [
     BrowserModule,

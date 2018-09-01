@@ -1,5 +1,12 @@
 <h2>{{titulo}}</h2>
 <br/>
+{{fecha| date:"dd/MM/yyyy"}} -
+{{fecha| date:"fullDate" | uppercase | lowercase}}
+<br/>
+{{nombre | lowercase}} -
+{{5 | conversor: 7}} <!-- Según el conversor pipe, el primer parámetro es '5' y
+el segundo parámetro es el número por el cual se multiplica, '7' -->
+<br/>
 <input type="text" [(ngModel)]="prenda_a_guardar">
 <button (click)="guardarPrenda()">Añadir prenda</button>
 <p *ngIf="prenda_a_guardar">La prenda a guardar es: <strong>{{prenda_a_guardar}}</strong></p>
