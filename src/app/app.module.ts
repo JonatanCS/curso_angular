@@ -9,7 +9,9 @@ import { routing, appRoutingProviders } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent }  from './contacto/contacto.component';
 import { CochesComponent } from "./coches/coches.component";
+import { PlantillasComponent } from './plantillas/plantillas.component';
 import { ConversorPipe } from "./pipe/conversor.pipe";
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -18,12 +20,14 @@ import { ConversorPipe } from "./pipe/conversor.pipe";
     FrutaComponent,
     EmpleadoComponent,
     HomeComponent,
+    PlantillasComponent,
     ContactoComponent,
     ConversorPipe,
     CochesComponent
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     FormsModule,
     routing
   ],
